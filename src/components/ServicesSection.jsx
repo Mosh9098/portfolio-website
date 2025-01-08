@@ -3,7 +3,7 @@ import React from 'react';
 export const ServicesSection = () => (
   <section id="services" className="services-section">
     <h2>My Services</h2>
-    <p>These are the services I offer and the skills I use to deliver high-quality results:</p>
+    <p>These are the services I offer to deliver high-quality projects:</p>
 
     <div className="service-card">
       <h3>Web Development</h3>

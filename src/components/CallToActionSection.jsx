@@ -2,7 +2,7 @@ import React from 'react';
 
 export const CallToActionSection = () => (
   <section className="cta-section">
-    <h2>Let Me Get You A Beautiful Website</h2>
+    <h2>For More Information about me</h2>
     <div className="cta-buttons">
       <a href="src/files/David Maina Resume.pdf" download className="download-btn">Download Resume</a>
       <a href="src/files/David Maina Education.pdf" download className="download-btn">Download Education</a>
