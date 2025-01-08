@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaPython, FaPhp, FaReact, FaNodeJs, FaFlask, FaGitAlt, FaGithub, FaDatabase, FaCode, FaJava, FaBootstrap, FaLaptopCode, FaTools, FaServer } from 'react-icons/fa';
-import { SiCplusplus, SiTailwindcss, SiPostman, SiFigma, SiJest } from 'react-icons/si';
+import { SiCplusplus, SiTailwindcss, SiPostman, SiFigma, SiJest, SiVite } from 'react-icons/si';
 
 export const SkillsSection = () => (
   <section id="skills" className="skills-section">
@@ -41,6 +41,7 @@ export const SkillsSection = () => (
           <li><FaLaptopCode className="skill-icon" /> XAMPP</li>
           <li><SiFigma className="skill-icon" /> Figma</li>
           <li><FaTools className="skill-icon" /> Chrome Developer Tools</li>
+          <li><SiVite className="skill-icon" /> Vite</li>
         </ul>
       </div>
       <div className="skills-category">
