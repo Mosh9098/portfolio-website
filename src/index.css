@@ -130,8 +130,6 @@ body {
   transform: scale(1.05);
 }
 
-
-/* SkillsSection.css */
 .skills-section {
   padding: 40px 20px;
   background-color: #1a1a1a; /* Dark background */
@@ -191,7 +189,53 @@ body {
   font-style: italic;
 }
 
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skills-section h2 {
+    font-size: 2rem;
+  }
 
+  .skills-section p {
+    font-size: 1rem;
+  }
+
+  .skills-category {
+    min-width: 100%;
+    margin: 10px 0;
+  }
+
+  .skills-category h3 {
+    font-size: 1.2rem;
+  }
+
+  .skills-category li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .skills-section p {
+    font-size: 0.9rem;
+  }
+
+  .skills-category {
+    min-width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .skills-category h3 {
+    font-size: 1rem;
+  }
+
+  .skills-category li {
+    font-size: 1rem;
+  }
+}
 
 /* Services Section */
 .services-section {
@@ -240,96 +284,6 @@ body {
   background-color: #ff1a1a; /* Darker red */
   transform: scale(1.05);
 }
-
-/* Portfolio Section */
-.portfolio-section {
-  padding: 5rem 2rem;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  text-align: center;
-}
-
-.portfolio-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.portfolio-card {
-  background-color: #333333;
-  border: 2px solid #ff4d4d;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.portfolio-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ff4d4d;
-}
-
-.portfolio-card p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Buttons */
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.button {
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-}
-
-.github-button {
-  background-color: #333333;
-  color: #ffffff;
-}
-
-.github-button:hover {
-  background-color: #ff4d4d;
-}
-
-.demo-button {
-  background-color: #ff4d4d;
-  color: #ffffff;
-}
-
-.demo-button:hover {
-  background-color: #333333;
-}
-
 /* Portfolio Section */
 .portfolio-section {
   padding: 5rem 2rem;
@@ -358,6 +312,10 @@ body {
   width: 300px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure buttons stay at the bottom */
+  height: 400px; /* Fixed height for consistent card size */
 }
 
 .portfolio-card:hover {
@@ -381,12 +339,15 @@ body {
 .portfolio-card p {
   margin-bottom: 1.5rem;
   height: 50px; /* Uniform height for text */
+  flex-grow: 1; /* Allow text to grow and push buttons down */
 }
 
+/* Buttons */
 .buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: auto; /* Push buttons to the bottom of the card */
 }
 
 .button {
@@ -405,66 +366,56 @@ body {
   transform: scale(1.1);
 }
 
-/* Carousel */
-.carousel {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 2rem;
-  z-index: 100;
-  border-radius: 10px;
-  text-align: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-section h2 {
+    font-size: 2rem; /* Smaller heading for tablets */
+  }
+
+  .portfolio-card {
+    width: 250px; /* Adjust card width for smaller screens */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .portfolio-card h3 {
+    font-size: 1.25rem; /* Smaller title font size */
+  }
+
+  .portfolio-card img {
+    height: 180px; /* Smaller image height */
+  }
 }
 
-.carousel-image {
-  width: 600px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin: 1rem 0;
+@media (max-width: 480px) {
+  .portfolio-section h2 {
+    font-size: 1.75rem; /* Smaller heading for mobile devices */
+  }
+
+  .portfolio-grid {
+    gap: 1rem; /* Reduce gap between cards */
+  }
+
+  .portfolio-card {
+    width: 100%; /* Full width on mobile */
+    padding: 1rem; /* Reduce padding further */
+  }
+
+  .portfolio-card img {
+    height: 150px; /* Smaller image height */
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Smaller gap between buttons */
+  }
+
+  .button {
+    width: 100%; /* Full-width buttons for better usability */
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
 }
 
-.carousel-arrow {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  font-size: 2rem;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-arrow:hover {
-  background-color: #ff4d4d;
-}
-
-.prev-arrow {
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.next-arrow {
-  position: absolute;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.close-carousel {
-  background-color: #ff4d4d;
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1
-}
 /* Call to Action Section */
 .cta-section {
   padding: 5rem 2rem;
@@ -482,6 +433,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .download-btn, .hire-btn {
@@ -499,6 +451,34 @@ body {
   background-color: #ff1a1a; /* Darker red */
   color: #ffffff; /* White */
   transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem; /* Reduce gap between buttons */
+  }
+
+  .download-btn, .hire-btn {
+    padding: 0.5rem 1.5rem; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Reduce button text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section h2 {
+    font-size: 1.75rem; /* Further reduce font size for very small screens */
+  }
+
+  .download-btn, .hire-btn {
+    width: 100%; /* Make buttons full width */
+    padding: 0.75rem; /* Adjust padding */
+  }
 }
 
 /* Contact Section */
@@ -614,39 +594,29 @@ footer .social-links a:hover {
 /* Hero Section */
 .hero-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem 2rem;
+  padding: 3rem 1rem;
   background-color: #1a1a1a; /* Dark background */
   text-align: center;
-  animation: fadeIn 2s ease;
-}
-
-.hero-content {
-  max-width: 600px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
-  color: #ffffff; /* White */
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin: 1.5rem 0;
-  color: #ff4d4d; /* Red */
+  font-size: 1rem;
+  margin: 1rem 0;
 }
 
 .hero-image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 5px solid #ff4d4d; /* Red */
-  margin-right: 2rem;
+  margin-bottom: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-
-
-
-
