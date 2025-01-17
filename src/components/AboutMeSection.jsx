@@ -16,6 +16,6 @@ export const AboutMeSection = () => (
     <p>
       I am also an excellent communicator with a proven ability to explain technical concepts to non-technical stakeholders, making me an asset in cross-functional teams. Always seeking new learning opportunities, I am committed to staying updated with the latest industry trends and best practices to ensure the continuous improvement of my skills and the quality of the software I deliver.
     </p>
-    <button className="talk-btn">Let's Talk</button>
+    {/* <button className="talk-btn">Let's Talk</button> */}
   </section>
 );
