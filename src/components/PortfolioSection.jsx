@@ -21,17 +21,24 @@ export const PortfolioSection = () => {
 
   const projects = [
     {
-      title: 'Construction Company Website',
-      description: 'Built a construction company website that advertises the company’s services.',
-      image: '/ltcthumbnail.jpg', 
+      title: 'School Management System',
+      description: 'Developed a comprehensive system for managing students, teachers, courses, and school operations.',
+      image: '/smsthumbnail.jpg', 
       images: [
-        '/ltcthumbnail.jpg',
-        '/ltc1.jpg',
-        '/ltc2.jpg',
-        '/ltc3.jpg',
-        '/ltc4.jpg',
+        '/smsthumbnail.jpg',
+        '/sms1.jpg',
+        '/sms2.jpg',
+        '/sms3.jpg',
+        '/sms4.jpg',
+        '/sms5.jpg',
+        '/sms6.jpg',
+        '/sms7.jpg',
+        '/sms8.jpg',
+        '/sms9.jpg',
+        '/sm1.jpg',
       ],
-      github: 'https://github.com/Mosh9098/contruction-company-website',
+      github: 'https://github.com/Mosh9098/School-Management-System',
+      liveSite: 'https://study-sphere-dun-three.vercel.app/'
     },
     {
       title: 'Hotel Menu Web App',
@@ -44,8 +51,10 @@ export const PortfolioSection = () => {
         '/hma3.jpg',
         '/hma4.jpg',
         '/hma5.jpg',
+        '/hma6.jpg',
       ],
       github: 'https://github.com/Mosh9098/Hotel-Menu-App',
+      liveSite: 'https://hotel-web-menu.vercel.app/'
     },
     {
       title: 'Car Rental Website',
@@ -59,6 +68,21 @@ export const PortfolioSection = () => {
         '/car4.jpg',
       ],
       github: 'https://github.com/Mosh9098/car-rental-app',
+      liveSite: 'https://davidmainacarrental.netlify.app/'
+    },
+    {
+      title: 'Construction Company Website',
+      description: 'Built a construction company website that advertises the company’s services.',
+      image: '/ltcthumbnail.jpg', 
+      images: [
+        '/ltcthumbnail.jpg',
+        '/ltc1.jpg',
+        '/ltc2.jpg',
+        '/ltc3.jpg',
+        '/ltc4.jpg',
+      ],
+      github: 'https://github.com/Mosh9098/contruction-company-website',
+      liveSite: 'https://contruction-company-website-woad.vercel.app/'
     },
     {
       title: 'Real Estate Website',
@@ -75,6 +99,7 @@ export const PortfolioSection = () => {
         '/rew8.jpg',
       ],
       github: 'https://github.com/Mosh9098/real-estate-website',
+      liveSite: 'https://real-estate-website.example.com'
     },
     {
       title: 'Pokémon Card Generator',
@@ -87,18 +112,7 @@ export const PortfolioSection = () => {
         '/pcg3.jpg',
       ],
       github: 'https://github.com/Mosh9098/Pokemon-Card-Generator',
-    },
-    {
-      title: 'School Management System',
-      description: 'Developed a comprehensive system for managing students, teachers, courses, and school operations.',
-      image: '/smsthumbnail.jpg', // Update with the correct path to the image
-      images: [
-        '/smsthumbnail.jpg',
-        '/sms1.jpg',
-        '/sms2.jpg',
-        '/sms.jpg',
-      ],
-      github: 'https://github.com/Mosh9098/School-Management-System',
+      liveSite: 'https://pokemon-card-generator.example.com'
     },
   ];
 
@@ -113,6 +127,7 @@ export const PortfolioSection = () => {
             <p>{project.description}</p>
             <div className="buttons">
               <a href={project.github} className="button github-button" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
+              <a href={project.liveSite} className="button live-site-button" target="_blank" rel="noopener noreferrer">Live Site</a>
               <button onClick={() => openCarousel(project.images)} className="button demo-button">Live Demo</button>
             </div>
           </div>
